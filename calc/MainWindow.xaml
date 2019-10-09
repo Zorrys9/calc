@@ -23,7 +23,8 @@
         <Button Content="-" HorizontalAlignment="Left" Height="48" Margin="263,103,0,0" VerticalAlignment="Top" Width="58" Click="Minus_Click"/>
         <Button Content="+" HorizontalAlignment="Left" Height="48" Margin="263,45,0,0" VerticalAlignment="Top" Width="58" Click="Plus_Click"/>
         <Button Content="=" HorizontalAlignment="Left" Height="48" Margin="155,226,0,0" VerticalAlignment="Top" Width="58" Click="Equally_Click"/>
-        <Button Content="AC" HorizontalAlignment="Left" Height="48" Margin="11,226,0,0" VerticalAlignment="Top" Width="58" Click="AllClear_Click"/>
+        <Button Content="AC" HorizontalAlignment="Left" Height="48" Margin="346,10,0,0" VerticalAlignment="Top" Width="58" Click="AllClear_Click"/>
+        <Button Content="." HorizontalAlignment="Left" Height="48" Margin="11,226,0,0" VerticalAlignment="Top" Width="58" Click="Point_Click" />
 
     </Grid>
 </Window>
