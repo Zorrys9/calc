@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Калькулятор" Height="369.6" Width="429.2">
     <Grid>
-        <TextBox x:Name="CalcBox" HorizontalAlignment="Left" Height="23" Margin="11,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="310"/>
+        <TextBox x:Name="CalcBox" HorizontalAlignment="Left" Height="23" Margin="11,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="310" IsEnabled="False"/>
         <Button Content="9" HorizontalAlignment="Left" Height="48" Margin="155,163,0,0" VerticalAlignment="Top" Width="58" Click="Nine_Click"/>
         <Button Content="6" HorizontalAlignment="Left" Height="48" Margin="155,103,0,0" VerticalAlignment="Top" Width="58" Click="Six_Click"/>
         <Button Content="5" HorizontalAlignment="Left" Height="48" Margin="83,103,0,0" VerticalAlignment="Top" Width="58" Click="Five_Click"/>
