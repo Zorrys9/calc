@@ -22,6 +22,37 @@ namespace calc
     public partial class MainWindow : Window
     {
         ArrayList ResultList = new ArrayList();
+        double Result = 0;
+        char sym = '+';
+
+        public void Val()
+        {
+            string res = "";
+            double rs = 0;
+            foreach(var itm in ResultList)
+            {
+                res += itm.ToString();
+            }
+            try { rs = double.Parse(res); } catch { rs = 0; }
+            switch (sym)
+            {
+                case'+':
+                    Result += rs;
+                    break;
+                case '-':
+                    Result -= rs;
+                    break;
+                case '*':
+                    Result *= rs;
+                    break;
+                case '/':
+                    Result /= rs;
+                    break;
+            }
+            sym = '+';
+            ResultList.Clear();
+        }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -89,71 +120,53 @@ namespace calc
 
         private void Equally_Click(object sender, RoutedEventArgs e)
         {
-            string Number ="";
-            double Result = 0;
-            int NumInt;
-            double NumDouble;
-            foreach(var Item in ResultList)
-            {
-                if (Item.GetType().Name.ToString() == "String")
-                {
-                    try
-                    {
-                        NumDouble = double.Parse(Number);
-                        Result += NumDouble;
-                    }
-                    catch
-                    {
-                        NumInt= int.Parse(Number);
-                        Result += NumInt ;
-                    }
-     
-                    
-
-                    Number = "";
-                }
-                else
-                {
-                    Number += Item;
-                }
-            }
+            Val();
             MessageBox.Show(Result.ToString());
         }
 
         private void Plus_Click(object sender, RoutedEventArgs e)
         {
             CalcBox.Text += "+";
-            ResultList.Add("+");
+            Val();
+            sym = '+';
+
         }
 
         private void Minus_Click(object sender, RoutedEventArgs e)
         {
             CalcBox.Text += "-";
-            ResultList.Add("-");
+            Val();
+            sym = '-';
+
         }
 
         private void Multiply_Click(object sender, RoutedEventArgs e)
         {
             CalcBox.Text += "*";
-            ResultList.Add("*");
+            Val();
+            sym = '*';
+
         }
 
         private void Divide_Click(object sender, RoutedEventArgs e)
         {
             CalcBox.Text += "/";
-            ResultList.Add("/");
+            Val();
+            sym = '/';
+
         }
 
         private void AllClear_Click(object sender, RoutedEventArgs e)
         {
             CalcBox.Text = "";
             ResultList.Clear();
+            Result = 0;
         }
 
         private void Point_Click(object sender, RoutedEventArgs e)
         {
             CalcBox.Text += ".";
-            ResultList.Add(".");
+            ResultList.Add(",");
         }
     }
 }
