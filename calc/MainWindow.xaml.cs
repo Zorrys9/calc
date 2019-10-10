@@ -25,18 +25,29 @@ namespace calc
         double Result = 0;
         char sym = '+';
 
+        //public void counting()
+        //{
+        //    foreach(var Item in CalcBox.Text)
+        //    {
+        //        if(Item == '+' || Item == '-' || Item == '*' || Item == '/' || Item == '=')
+        //        {
+
+        //        }
+        //    }
+        //}
+
         public void Val()
         {
             string res = "";
             double rs = 0;
-            foreach(var itm in ResultList)
+            foreach (var itm in ResultList)
             {
                 res += itm.ToString();
             }
             try { rs = double.Parse(res); } catch { rs = 0; }
             switch (sym)
             {
-                case'+':
+                case '+':
                     Result += rs;
                     break;
                 case '-':
@@ -127,7 +138,7 @@ namespace calc
         private void Plus_Click(object sender, RoutedEventArgs e)
         {
             CalcBox.Text += "+";
-            Val();
+          Val();
             sym = '+';
 
         }
@@ -135,7 +146,7 @@ namespace calc
         private void Minus_Click(object sender, RoutedEventArgs e)
         {
             CalcBox.Text += "-";
-            Val();
+        Val();
             sym = '-';
 
         }
@@ -143,7 +154,7 @@ namespace calc
         private void Multiply_Click(object sender, RoutedEventArgs e)
         {
             CalcBox.Text += "*";
-            Val();
+         Val();
             sym = '*';
 
         }
@@ -151,7 +162,7 @@ namespace calc
         private void Divide_Click(object sender, RoutedEventArgs e)
         {
             CalcBox.Text += "/";
-            Val();
+           Val();
             sym = '/';
 
         }
@@ -167,6 +178,11 @@ namespace calc
         {
             CalcBox.Text += ".";
             ResultList.Add(",");
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+   //         if(e.Key.ToString() == "0") { MessageBox.Show(e.Key.ToString()); }
         }
     }
 }
