@@ -5,30 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:calc"
         mc:Ignorable="d"
-        Title="Калькулятор" Height="369.6" Width="429.2" KeyDown="Window_KeyDown">
+        Title="Калькулятор" Height="369.6" Width="429.2">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="190*"/>
-            <ColumnDefinition Width="233*"/>
-        </Grid.ColumnDefinitions>
-        <TextBox x:Name="CalcBox" HorizontalAlignment="Left" Height="23" Margin="11,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="310" IsEnabled="False" Grid.ColumnSpan="2"/>
-        <Button Content="9" HorizontalAlignment="Left" Height="48" Margin="155,163,0,0" VerticalAlignment="Top" Width="58" Click="Nine_Click" Grid.ColumnSpan="2"/>
-        <Button Content="6" HorizontalAlignment="Left" Height="48" Margin="155,103,0,0" VerticalAlignment="Top" Width="58" Click="Six_Click" Grid.ColumnSpan="2"/>
-        <Button Content="5" HorizontalAlignment="Left" Height="48" Margin="83,103,0,0" VerticalAlignment="Top" Width="58" Click="Five_Click"/>
-        <Button Content="4" HorizontalAlignment="Left" Height="48" Margin="11,103,0,0" VerticalAlignment="Top" Width="58" Click="Four_Click"/>
-        <Button Content="3" HorizontalAlignment="Left" Height="48" Margin="155,45,0,0" VerticalAlignment="Top" Width="58" Click="Three_Click" Grid.ColumnSpan="2" />
-        <Button Content="2" HorizontalAlignment="Left" Height="48" Margin="83,45,0,0" VerticalAlignment="Top" Width="58" Click="Two_Click" />
-        <Button Content="1" HorizontalAlignment="Left" Height="48" Margin="11,45,0,0" VerticalAlignment="Top" Width="58" Click="One_Click"/>
-        <Button Content="7" HorizontalAlignment="Left" Height="48" Margin="11,164,0,0" VerticalAlignment="Top" Width="58" Click="Seven_Click" />
-        <Button Content="8" HorizontalAlignment="Left" Height="48" Margin="83,164,0,0" VerticalAlignment="Top" Width="58" Click="Eight_Click"/>
-        <Button Content="0" HorizontalAlignment="Left" Height="48" Margin="83,226,0,0" VerticalAlignment="Top" Width="58" Click="Zero_Click"/>
-        <Button Content="/" HorizontalAlignment="Left" Height="48" Margin="73.2,226,0,0" VerticalAlignment="Top" Width="58" Click="Divide_Click" Grid.Column="1"/>
-        <Button Content="*" HorizontalAlignment="Left" Height="48" Margin="73.2,163,0,0" VerticalAlignment="Top" Width="58" Click="Multiply_Click" Grid.Column="1"/>
-        <Button Content="-" HorizontalAlignment="Left" Height="48" Margin="73.2,103,0,0" VerticalAlignment="Top" Width="58" Click="Minus_Click" Grid.Column="1"/>
-        <Button Content="+" HorizontalAlignment="Left" Height="48" Margin="73.2,45,0,0" VerticalAlignment="Top" Width="58" Click="Plus_Click" Grid.Column="1"/>
-        <Button Content="=" HorizontalAlignment="Left" Height="48" Margin="155,226,0,0" VerticalAlignment="Top" Width="58" Click="Equally_Click" Grid.ColumnSpan="2"/>
-        <Button Content="AC" HorizontalAlignment="Left" Height="48" Margin="156.2,10,0,0" VerticalAlignment="Top" Width="58" Click="AllClear_Click" Grid.Column="1"/>
-        <Button Content="." HorizontalAlignment="Left" Height="48" Margin="11,226,0,0" VerticalAlignment="Top" Width="58" Click="Point_Click" />
+        <TextBox x:Name="CalcBox" HorizontalAlignment="Left" Height="23" Margin="11,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="310" IsEnabled="False"/>
+        <Button Content="9" HorizontalAlignment="Left" Height="48" Margin="155,196,0,0" VerticalAlignment="Top" Width="58" Click="Nine_Click"/>
+        <Button Content="6" HorizontalAlignment="Left" Height="48" Margin="155,136,0,0" VerticalAlignment="Top" Width="58" Click="Six_Click"/>
+        <Button Content="5" HorizontalAlignment="Left" Height="48" Margin="83,136,0,0" VerticalAlignment="Top" Width="58" Click="Five_Click"/>
+        <Button Content="4" HorizontalAlignment="Left" Height="48" Margin="11,136,0,0" VerticalAlignment="Top" Width="58" Click="Four_Click"/>
+        <Button Content="3" HorizontalAlignment="Left" Height="48" Margin="155,78,0,0" VerticalAlignment="Top" Width="58" Click="Three_Click" />
+        <Button Content="2" HorizontalAlignment="Left" Height="48" Margin="83,78,0,0" VerticalAlignment="Top" Width="58" Click="Two_Click" />
+        <Button Content="1" HorizontalAlignment="Left" Height="48" Margin="11,78,0,0" VerticalAlignment="Top" Width="58" Click="One_Click"/>
+        <Button Content="7" HorizontalAlignment="Left" Height="48" Margin="11,197,0,0" VerticalAlignment="Top" Width="58" Click="Seven_Click" />
+        <Button Content="8" HorizontalAlignment="Left" Height="48" Margin="83,197,0,0" VerticalAlignment="Top" Width="58" Click="Eight_Click"/>
+        <Button Content="0" HorizontalAlignment="Left" Height="48" Margin="83,259,0,0" VerticalAlignment="Top" Width="58" Click="Zero_Click"/>
+        <Button Content="/" HorizontalAlignment="Left" Height="48" Margin="264,259,0,0" VerticalAlignment="Top" Width="58" Click="Divide_Click"/>
+        <Button Content="*" HorizontalAlignment="Left" Height="48" Margin="264,196,0,0" VerticalAlignment="Top" Width="58" Click="Multiply_Click"/>
+        <Button Content="-" HorizontalAlignment="Left" Height="48" Margin="264,136,0,0" VerticalAlignment="Top" Width="58" Click="Minus_Click"/>
+        <Button Content="+" HorizontalAlignment="Left" Height="48" Margin="264,78,0,0" VerticalAlignment="Top" Width="58" Click="Plus_Click"/>
+        <Button Content="=" HorizontalAlignment="Left" Height="48" Margin="155,259,0,0" VerticalAlignment="Top" Width="58" Click="Equally_Click"/>
+        <Button Content="AC" HorizontalAlignment="Right" Height="48" Margin="0,78,21.4,0" VerticalAlignment="Top" Width="58" Click="AllClear_Click"/>
+        <Button Content="." HorizontalAlignment="Left" Height="48" Margin="11,259,0,0" VerticalAlignment="Top" Width="58" Click="Point_Click" />
+        <Button Content="&lt;---" HorizontalAlignment="Left" Height="48" Margin="343,10,0,0" VerticalAlignment="Top" Width="58" Click="Backspace_Click"/>
 
     </Grid>
 </Window>
